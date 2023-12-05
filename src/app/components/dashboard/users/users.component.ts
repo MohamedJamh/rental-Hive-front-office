@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import {HttpClient} from "@angular/common/http";
+import {HttpClient, HttpResponse} from "@angular/common/http";
 import {User} from "../../../core/models/User";
 import {EnvService} from "../../../core/services/EnvService";
 import { Response } from 'src/app/core/models/Response';
+import {UserService} from "../../../core/services/UserService";
 
 @Component({
   selector: 'app-users',
@@ -11,20 +12,18 @@ import { Response } from 'src/app/core/models/Response';
 })
 export class UsersComponent implements OnInit {
 
-  users : User[]  = []
+  users : User[] = []
 
-  constructor(private httpClient : HttpClient,private envService : EnvService) { }
+  constructor(private userService : UserService) { }
 
   ngOnInit(): void {
-    this.getUsers();
+    this.userService.getAllUsers()
+      .subscribe((response : HttpResponse<Response<User>>) => {
+        if(response.status == 200 && response.body?.result)
+          this.users = response.body?.result
+      })
   }
 
-  getUsers(){
-    this.httpClient.get<Response<User>>(this.envService.apiUrl + '/user').subscribe(data => {
-        if(data.result != null){
-          this.users = data.result;
-        }
-    });
-  }
+
 
 }
