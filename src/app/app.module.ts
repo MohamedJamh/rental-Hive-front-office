@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { UsersComponent } from './components/dashboard/users/users.component';
 import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import { LoaderComponent } from './components/shared/loader/loader.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -19,11 +20,12 @@ import { LoaderComponent } from './components/shared/loader/loader.component';
     UsersComponent,
     LoaderComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        FormsModule
+    ],
   providers: [
   ],
   bootstrap: [AppComponent]

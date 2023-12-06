@@ -1,19 +1,22 @@
-export class User{
-    id: number | undefined;
-    firstName: string;
-    lastName: string;
-    email: string;
-    organizationName: string;
-    createdAt: string;
+import {Organization} from "./Organization";
 
-    constructor(firstName: string, lastName: string, email: string, organizationName: string, createdAt: string, id?: number){
-        if(id !== undefined){
-            this.id = id;
-        }
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.email = email;
-        this.organizationName = organizationName;
-        this.createdAt = createdAt;
-    }
+export interface IUser{
+    id?: number | undefined;
+    firstName?: string;
+    lastName?: string;
+    email?: string;
+    password?: string;
+    organization: Organization;
+    createdAt?: string;
+}
+
+export class User implements IUser{
+
+    constructor(public firstName?: string,
+                public lastName?: string,
+                public email?: string,
+                public password?: string,
+                public organization: Organization = new Organization(),
+                public createdAt?: string,
+                public id?: number){}
 }
