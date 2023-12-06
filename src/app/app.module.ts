@@ -10,6 +10,8 @@ import { UsersComponent } from './components/dashboard/users/users.component';
 import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import { LoaderComponent } from './components/shared/loader/loader.component';
 import {FormsModule} from "@angular/forms";
+import { EquipmentFamilyComponent } from './components/dashboard/equipment-family/equipment-family.component';
+import { EquipmentsComponent } from './components/dashboard/equipments/equipments.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import {FormsModule} from "@angular/forms";
     NavbarComponent,
     HomeComponent,
     UsersComponent,
-    LoaderComponent
+    LoaderComponent,
+    EquipmentFamilyComponent,
+    EquipmentsComponent
   ],
     imports: [
         BrowserModule,
