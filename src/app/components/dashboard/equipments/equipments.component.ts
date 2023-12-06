@@ -34,14 +34,6 @@ export class EquipmentsComponent implements OnInit {
         })
   }
 
-  addEquipment() {
-    this.equipmentService.addEquipment(this.equipment).subscribe((response : HttpResponse<Response<Equipment>>) => {
-      if( [200,201].includes(response.status) && response.body?.result){
-        this.equipmentFamilies.push(response.body.result);
-        alert(response.body.message)
-      }
-    });
-  }
 
   trackEquipment(index : number, equipment : Equipment) {
     return equipment.id!;
@@ -60,20 +52,29 @@ export class EquipmentsComponent implements OnInit {
     this.action = action;
   }
 
+  addEquipment() {
+      this.equipmentService.addEquipment(this.equipment).subscribe((response : HttpResponse<Response<Equipment>>) => {
+          if( [200,201].includes(response.status) && response.body?.result){
+              this.equipments.push(response.body.result);
+              alert(response.body.message)
+          }
+      });
+  }
+
   updateEquipment() {
-    // this.equipmentService.updateEquipment(this.equipment).subscribe((response : HttpResponse<Response<Equipment>>) => {
-    //   if( response.body?.result && [200,201].includes(response.status)){
-    //     for (let eq of this.equipments) {
-    //       if(eq.id === response.body.result.id){
-    //         eq.name = response.body.result.name;
-    //         eq.quantity = response.body.result.quantity;
-    //         eq.equipmentFamily = response.body.result.equipmentFamily as EquipmentFamily
-    //       }
-    //     }
-    //     alert(response.body.message)
-    //     console.log(this.equipmentFamilies)
-    //   }
-    // });
+    this.equipmentService.updateEquipment(this.equipment).subscribe((response : HttpResponse<Response<Equipment>>) => {
+      if( response.body?.result && [200,201].includes(response.status)){
+        for (let eq of this.equipments) {
+          if(eq.id === response.body.result.id){
+            eq.name = response.body.result.name;
+            eq.quantity = response.body.result.quantity;
+            eq.equipmentFamily = response.body.result.equipmentFamily as EquipmentFamily
+          }
+        }
+        alert(response.body.message)
+        console.log(this.equipmentFamilies)
+      }
+    });
   }
 
 }

@@ -12,6 +12,7 @@ import { LoaderComponent } from './components/shared/loader/loader.component';
 import {FormsModule} from "@angular/forms";
 import { EquipmentFamilyComponent } from './components/dashboard/equipment-family/equipment-family.component';
 import { EquipmentsComponent } from './components/dashboard/equipments/equipments.component';
+import { ServicesComponent } from './components/services/services.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { EquipmentsComponent } from './components/dashboard/equipments/equipment
     UsersComponent,
     LoaderComponent,
     EquipmentFamilyComponent,
-    EquipmentsComponent
+    EquipmentsComponent,
+    ServicesComponent
   ],
     imports: [
         BrowserModule,

@@ -5,9 +5,11 @@ import {HomeComponent} from "./components/home/home.component";
 import {UsersComponent} from "./components/dashboard/users/users.component";
 import {EquipmentFamilyComponent} from "./components/dashboard/equipment-family/equipment-family.component";
 import {EquipmentsComponent} from "./components/dashboard/equipments/equipments.component";
+import {ServicesComponent} from "./components/services/services.component";
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
+  { path: 'services', component: ServicesComponent },
   {
     path: 'dashboard',
     component: DashboardComponent,

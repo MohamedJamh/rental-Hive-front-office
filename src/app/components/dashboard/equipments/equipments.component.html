@@ -83,7 +83,7 @@
                     <div>
                         <label for="equipmentFamily" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Equipment Family</label>
                         <select name="equipmentFamily" [(ngModel)]="equipment.equipmentFamily.id" id="equipmentFamily" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                            <option *ngFor="let family of equipmentFamilies" [selected]="family.id == equipment.equipmentFamily.id" [value]="family.id" >{{family.name}}</option>
+                            <option *ngFor="let family of equipmentFamilies" [selected]="family.id == equipment.equipmentFamily.id" [ngValue]="family.id" >{{family.name}}</option>
                         </select>
                     </div>
                     <div>
