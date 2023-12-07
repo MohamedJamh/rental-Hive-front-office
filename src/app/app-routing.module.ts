@@ -6,10 +6,30 @@ import {UsersComponent} from "./components/dashboard/users/users.component";
 import {EquipmentFamilyComponent} from "./components/dashboard/equipment-family/equipment-family.component";
 import {EquipmentsComponent} from "./components/dashboard/equipments/equipments.component";
 import {ServicesComponent} from "./components/services/services.component";
+import {RentalComponent} from "./components/services/rental/rental.component";
+import {CalendarComponent} from "./components/services/rental/calendar/calendar.component";
+import {
+  EquipmentSelectionComponent
+} from "./components/services/rental/equipment-selection/equipment-selection.component";
+import {RentValidationComponent} from "./components/services/rental/rent-validation/rent-validation.component";
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'services', component: ServicesComponent },
+  {
+    path: 'services',
+    children: [
+      {path: '', component: ServicesComponent},
+      {
+        path: 'rental',
+        component: RentalComponent,
+        children:[
+          {path: '', component: CalendarComponent},
+          {path: 'equipment-selection', component: EquipmentSelectionComponent},
+          {path: 'rent-validation', component: RentValidationComponent}
+        ]
+      }
+    ]
+  },
   {
     path: 'dashboard',
     component: DashboardComponent,

@@ -7,6 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServicesComponent implements OnInit {
 
+  ourServices: any[] = [
+      {
+        title :'Construct Equipment Rental',
+        description : 'We have a wide range of construction equipment for rent. We have the',
+        link : 'rental'
+      }
+  ]
   constructor() { }
 
   ngOnInit(): void {
