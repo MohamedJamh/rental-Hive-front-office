@@ -12,6 +12,7 @@ import {
   EquipmentSelectionComponent
 } from "./components/services/rental/equipment-selection/equipment-selection.component";
 import {RentValidationComponent} from "./components/services/rental/rent-validation/rent-validation.component";
+import {OrdersComponent} from "./components/dashboard/orders/orders.component";
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -37,6 +38,7 @@ const routes: Routes = [
       {path: 'users', component: UsersComponent},
       {path: 'equipment-family', component: EquipmentFamilyComponent},
       {path: 'equipments', component: EquipmentsComponent},
+      {path: 'orders', component: OrdersComponent},
     ]
   }
 ];

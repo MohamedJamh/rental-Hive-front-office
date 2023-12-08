@@ -18,6 +18,7 @@ import { RentalComponent } from './components/services/rental/rental.component';
 import { CalendarComponent } from './components/services/rental/calendar/calendar.component';
 import { EquipmentSelectionComponent } from './components/services/rental/equipment-selection/equipment-selection.component';
 import { RentValidationComponent } from './components/services/rental/rent-validation/rent-validation.component';
+import { OrdersComponent } from './components/dashboard/orders/orders.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { RentValidationComponent } from './components/services/rental/rent-valid
     RentalComponent,
     CalendarComponent,
     EquipmentSelectionComponent,
-    RentValidationComponent
+    RentValidationComponent,
+    OrdersComponent
   ],
     imports: [
         BrowserModule,
