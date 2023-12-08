@@ -19,6 +19,7 @@ import { CalendarComponent } from './components/services/rental/calendar/calenda
 import { EquipmentSelectionComponent } from './components/services/rental/equipment-selection/equipment-selection.component';
 import { RentValidationComponent } from './components/services/rental/rent-validation/rent-validation.component';
 import { OrdersComponent } from './components/dashboard/orders/orders.component';
+import { OffersComponent } from './components/dashboard/offers/offers.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { OrdersComponent } from './components/dashboard/orders/orders.component'
     CalendarComponent,
     EquipmentSelectionComponent,
     RentValidationComponent,
-    OrdersComponent
+    OrdersComponent,
+    OffersComponent
   ],
     imports: [
         BrowserModule,
