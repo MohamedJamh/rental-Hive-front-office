@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {RentProgressStateService} from "../rentProgressState.service";
 
 @Component({
   selector: 'app-rent-validation',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RentValidationComponent implements OnInit {
 
-  constructor() { }
+  constructor(protected rentProgressState : RentProgressStateService) { }
 
   ngOnInit(): void {
   }

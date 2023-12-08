@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {RentProgressStateService} from "../rentProgressState.service";
 
 @Component({
   selector: 'app-calendar',
@@ -6,7 +7,7 @@ import {Component, Input, OnInit} from '@angular/core';
   styleUrls: ['./calendar.component.css']
 })
 export class CalendarComponent implements OnInit {
-  constructor() { }
+  constructor(protected rentProgressState : RentProgressStateService) { }
 
   ngOnInit(): void {
   }
