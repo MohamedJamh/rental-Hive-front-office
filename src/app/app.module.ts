@@ -20,6 +20,7 @@ import { EquipmentSelectionComponent } from './components/services/rental/equipm
 import { RentValidationComponent } from './components/services/rental/rent-validation/rent-validation.component';
 import { OrdersComponent } from './components/dashboard/orders/orders.component';
 import { OffersComponent } from './components/dashboard/offers/offers.component';
+import { ReservationsComponent } from './components/dashboard/reservations/reservations.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { OffersComponent } from './components/dashboard/offers/offers.component'
     EquipmentSelectionComponent,
     RentValidationComponent,
     OrdersComponent,
-    OffersComponent
+    OffersComponent,
+    ReservationsComponent
   ],
     imports: [
         BrowserModule,

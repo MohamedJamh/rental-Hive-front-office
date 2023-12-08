@@ -14,6 +14,7 @@ import {
 import {RentValidationComponent} from "./components/services/rental/rent-validation/rent-validation.component";
 import {OrdersComponent} from "./components/dashboard/orders/orders.component";
 import {OffersComponent} from "./components/dashboard/offers/offers.component";
+import {ReservationsComponent} from "./components/dashboard/reservations/reservations.component";
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -41,6 +42,7 @@ const routes: Routes = [
       {path: 'equipments', component: EquipmentsComponent},
       {path: 'orders', component: OrdersComponent},
       {path: 'offers', component: OffersComponent},
+      {path: 'reservation', component: ReservationsComponent},
     ]
   }
 ];
